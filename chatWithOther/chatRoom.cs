@@ -19,7 +19,14 @@ namespace chatWithOther {
          * 获取服务器电脑名：Page.Server.ManchineName 
          * 
          */
-        public ChatRoom() => InitializeComponent();
+        private string UserName = "";
+
+        public ChatRoom(string UserName) {
+            InitializeComponent();
+            if (!UserName.Equals("")) {
+                this.UserName = UserName;
+            }
+        }
 
         private void ChatRoom_FormClosing(object sender, FormClosingEventArgs e) {
             System.Environment.Exit(0);
@@ -38,20 +45,22 @@ namespace chatWithOther {
         }
 
         private void SendButton_Click(object sender, EventArgs e) {
-            String text = inputText.Text;
+            string text = inputText.Text;
             inputText.Clear();
-            String name = getCurrentName();
-            String date = DateTime.Now.ToString();
+            string name = getCurrentName();
+            string date = DateTime.Now.ToString();
             chatText.AppendText(name + " " + date + "\r\n");
             chatText.AppendText(text + "\r\n");
         }
 
-        private String getCurrentName() {
-            String name = Dns.GetHostName();
-            return name;
+        private string getCurrentName() {
+            if (UserName.Equals("")) {
+                UserName = Dns.GetHostName();
+            }
+            return UserName;
         }
 
-        private List<String> getCurrentPersonNum() {
+        private List<string> getCurrentPersonNum() {
             return null;
         }
 

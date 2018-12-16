@@ -1,10 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 
 namespace chatWithOther {
@@ -16,12 +10,21 @@ namespace chatWithOther {
         }
 
         private void LoginButton_Click(object sender, EventArgs e) {
-            String UserName = UserNameText.Text;
-            String PassWord = PassWordText.Text;
+            string UserName = UserNameText.Text;
+            string PassWord = PassWordText.Text;
             //安全过滤
-
+            if(UserName.Contains("\"") || UserName.Contains("1=1")) {
+                MessageBox.Show("用户名中包含不合法词或字符串");
+                return;
+            }
             //验证账号密码是否正确
 
+            //新建窗体，登陆成功
+            if(UserName == PassWord) {
+                Form ChatRoomForm = new ChatRoom(UserName);
+                ChatRoomForm.Show();
+                this.Hide();
+            }
         }
 
         private void CancelButton_Click(object sender, EventArgs e) {
