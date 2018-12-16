@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chatWithOther", "chatWithOther\chatWithOther.csproj", "{C2BF3B45-5039-4345-8A38-770ECC5D5B55}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatWithOther", "chatWithOther\ChatWithOther.csproj", "{C2BF3B45-5039-4345-8A38-770ECC5D5B55}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testScoures", "testScoures\testScoures.csproj", "{D28FF433-4608-4896-8270-44453EFA9CA2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestScoures", "testScoures\TestScoures.csproj", "{D28FF433-4608-4896-8270-44453EFA9CA2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chatRoomService", "chatRoomService\chatRoomService.csproj", "{519D4E1A-350C-422B-9655-3F435CF18961}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatRoomService", "chatRoomService\ChatRoomService.csproj", "{519D4E1A-350C-422B-9655-3F435CF18961}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

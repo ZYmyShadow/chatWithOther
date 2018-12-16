@@ -1,5 +1,5 @@
 ﻿namespace chatRoomService {
-    partial class chatRoomService {
+    partial class ChatRoomService {
         /// <summary>
         /// 必需的设计器变量。
         /// </summary>

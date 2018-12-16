@@ -12,7 +12,7 @@ namespace chatRoomService {
         static void Main() {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new chatRoomService());
+            Application.Run(new ChatRoomService());
         }
     }
 }

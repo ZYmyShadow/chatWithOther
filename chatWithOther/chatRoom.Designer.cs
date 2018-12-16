@@ -1,6 +1,6 @@
 ﻿namespace chatWithOther
 {
-    partial class chatRoom
+    partial class ChatRoom
     {
         /// <summary>
         /// 必需的设计器变量。
@@ -82,7 +82,7 @@
             this.sendButton.TabIndex = 4;
             this.sendButton.Text = "send";
             this.sendButton.UseVisualStyleBackColor = true;
-            this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
+            this.sendButton.Click += new System.EventHandler(this.SendButton_Click);
             // 
             // currentPerson
             // 
@@ -107,7 +107,7 @@
             this.chatTextChange.Enabled = true;
             this.chatTextChange.Tick += new System.EventHandler(this.chatTextChange_Tick);
             // 
-            // chatRoom
+            // ChatRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -118,11 +118,10 @@
             this.Controls.Add(this.currentTime);
             this.Controls.Add(this.chatText);
             this.MaximizeBox = false;
-            this.Name = "chatRoom";
+            this.Name = "ChatRoom";
             this.Text = "CHAT ROOM";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.chatRoom_FormClosed);
-            this.Load += new System.EventHandler(this.chatRoom_Load);
-            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.chatRoom_KeyUp);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChatRoom_FormClosing);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.ChatRoom_KeyUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 

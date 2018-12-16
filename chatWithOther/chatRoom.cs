@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Net;
 
 namespace chatWithOther {
-    public partial class chatRoom : Form {
+    public partial class ChatRoom : Form {
         /**
          * 
          * 当前电脑名：static System.Environment.MachineName
@@ -19,28 +19,25 @@ namespace chatWithOther {
          * 获取服务器电脑名：Page.Server.ManchineName 
          * 
          */
-        public chatRoom() => InitializeComponent();
+        public ChatRoom() => InitializeComponent();
 
-        private void chatRoom_Load(object sender, EventArgs e) {
-        }
-
-        private void chatRoom_FormClosed(object sender, FormClosedEventArgs e) {
+        private void ChatRoom_FormClosing(object sender, FormClosingEventArgs e) {
             System.Environment.Exit(0);
         }
 
         private void inputText_KeyUp(object sender, KeyEventArgs e) {
             if (e.Modifiers == Keys.Control && e.KeyCode == Keys.Enter) {
-                sendButton_Click(sender, e);
+                SendButton_Click(sender, e);
             }
         }
 
-        private void chatRoom_KeyUp(object sender, KeyEventArgs e) {
-            if (e.KeyCode == Keys.Escape) {
+        private void ChatRoom_KeyUp(object sender, KeyEventArgs e) {
+            if(e.KeyCode == Keys.Escape) {
                 System.Environment.Exit(0);
             }
         }
 
-        private void sendButton_Click(object sender, EventArgs e) {
+        private void SendButton_Click(object sender, EventArgs e) {
             String text = inputText.Text;
             inputText.Clear();
             String name = getCurrentName();
@@ -63,7 +60,6 @@ namespace chatWithOther {
         }
 
         private void chatTextChange_Tick(object sender, EventArgs e) {
-
         }
     }
 }

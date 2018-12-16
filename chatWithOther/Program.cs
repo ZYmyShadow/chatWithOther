@@ -13,7 +13,7 @@ namespace chatWithOther
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new chatRoom());
+            Application.Run(new LoginForm());
         }
     }
 }

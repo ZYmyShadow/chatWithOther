@@ -8,8 +8,8 @@ using System.Text;
 using System.Windows.Forms;
 
 namespace chatRoomService {
-    public partial class chatRoomService : Form {
-        public chatRoomService() {
+    public partial class ChatRoomService : Form {
+        public ChatRoomService() {
             InitializeComponent();
         }
     }
