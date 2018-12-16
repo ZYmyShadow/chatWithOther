@@ -44,11 +44,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="chatRoomService.cs">
+    <Compile Include="ChatRoomService.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="chatRoomService.Designer.cs">
-      <DependentUpon>chatRoomService.cs</DependentUpon>
+    <Compile Include="ChatRoomService.Designer.cs">
+      <DependentUpon>ChatRoomService.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
