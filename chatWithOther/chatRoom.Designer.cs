@@ -71,6 +71,7 @@
             this.inputText.Name = "inputText";
             this.inputText.Size = new System.Drawing.Size(650, 123);
             this.inputText.TabIndex = 3;
+            this.inputText.KeyUp += new System.Windows.Forms.KeyEventHandler(this.inputText_KeyUp);
             // 
             // sendButton
             // 
@@ -82,7 +83,6 @@
             this.sendButton.Text = "send";
             this.sendButton.UseVisualStyleBackColor = true;
             this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
-            this.sendButton.KeyUp += new System.Windows.Forms.KeyEventHandler(this.sendButton_KeyUp);
             // 
             // currentPerson
             // 
@@ -122,6 +122,7 @@
             this.Text = "CHAT ROOM";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.chatRoom_FormClosed);
             this.Load += new System.EventHandler(this.chatRoom_Load);
+            this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.chatRoom_KeyUp);
             this.ResumeLayout(false);
             this.PerformLayout();
 

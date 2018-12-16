@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chatWithOther", "chatWithOt
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "testScoures", "testScoures\testScoures.csproj", "{D28FF433-4608-4896-8270-44453EFA9CA2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "chatRoomService", "chatRoomService\chatRoomService.csproj", "{519D4E1A-350C-422B-9655-3F435CF18961}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{D28FF433-4608-4896-8270-44453EFA9CA2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D28FF433-4608-4896-8270-44453EFA9CA2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D28FF433-4608-4896-8270-44453EFA9CA2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{519D4E1A-350C-422B-9655-3F435CF18961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{519D4E1A-350C-422B-9655-3F435CF18961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{519D4E1A-350C-422B-9655-3F435CF18961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{519D4E1A-350C-422B-9655-3F435CF18961}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

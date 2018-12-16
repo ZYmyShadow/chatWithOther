@@ -1,10 +1,24 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Collections.Generic;
+using System.Net;
 
 namespace chatWithOther {
     public partial class chatRoom : Form {
-
+        /**
+         * 
+         * 当前电脑名：static System.Environment.MachineName
+         * 当前电脑所属网域：static System.Environment.UserDomainName
+         * 当前电脑用户：static System.Environment.UserName
+         * 获取当前电脑名：static System.Net.Dns.GetHostName()
+         * 根据电脑名取出全部IP地址：static System.Net.Dns.Resolve(电脑名).AddressList
+         * 也可根据IP地址取出电脑名：static System.Net.Dns.Resolve(IP地址).HostName
+         * 获取客户端电脑IP：Page.Request.UserHostAddress
+         * 获取客户端电脑名：Page.Request.UserHostName
+         * 获取用户信息：Page.User
+         * 获取服务器电脑名：Page.Server.ManchineName 
+         * 
+         */
         public chatRoom() => InitializeComponent();
 
         private void chatRoom_Load(object sender, EventArgs e) {
@@ -14,10 +28,14 @@ namespace chatWithOther {
             System.Environment.Exit(0);
         }
 
-        private void sendButton_KeyUp(object sender, KeyEventArgs e) {
-            if (e.KeyCode == Keys.Enter) {
+        private void inputText_KeyUp(object sender, KeyEventArgs e) {
+            if (e.Modifiers == Keys.Control && e.KeyCode == Keys.Enter) {
                 sendButton_Click(sender, e);
-            } else if (e.KeyCode == Keys.Escape) {
+            }
+        }
+
+        private void chatRoom_KeyUp(object sender, KeyEventArgs e) {
+            if (e.KeyCode == Keys.Escape) {
                 System.Environment.Exit(0);
             }
         }
@@ -32,7 +50,8 @@ namespace chatWithOther {
         }
 
         private String getCurrentName() {
-            return null;
+            String name = Dns.GetHostName();
+            return name;
         }
 
         private List<String> getCurrentPersonNum() {
