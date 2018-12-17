@@ -88,6 +88,7 @@
             this.Controls.Add(this.PortNum);
             this.Controls.Add(this.ServiceOK);
             this.Controls.Add(this.ClientList);
+            this.MaximizeBox = false;
             this.Name = "ChatRoomService";
             this.Text = "Form1";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChatRoomService_FormClosing);

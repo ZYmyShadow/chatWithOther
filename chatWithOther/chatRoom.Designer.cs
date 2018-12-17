@@ -34,7 +34,6 @@
             this.inputText = new System.Windows.Forms.TextBox();
             this.sendButton = new System.Windows.Forms.Button();
             this.changeTime = new System.Windows.Forms.Timer(this.components);
-            this.chatTextChange = new System.Windows.Forms.Timer(this.components);
             this.currentPersonList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
@@ -91,11 +90,6 @@
             this.changeTime.Interval = 1000;
             this.changeTime.Tick += new System.EventHandler(this.changeTime_Tick);
             // 
-            // chatTextChange
-            // 
-            this.chatTextChange.Enabled = true;
-            this.chatTextChange.Tick += new System.EventHandler(this.chatTextChange_Tick);
-            // 
             // currentPersonList
             // 
             this.currentPersonList.BackColor = System.Drawing.SystemColors.Control;
@@ -133,7 +127,6 @@
         private System.Windows.Forms.TextBox inputText;
         private System.Windows.Forms.Button sendButton;
         private System.Windows.Forms.Timer changeTime;
-        private System.Windows.Forms.Timer chatTextChange;
         private System.Windows.Forms.ListBox currentPersonList;
     }
 }

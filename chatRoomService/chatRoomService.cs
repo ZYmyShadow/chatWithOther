@@ -33,10 +33,8 @@ namespace chatRoomService {
                     Console.WriteLine(e.ToString());
                 }
             }
-            //listener.Stop();  
         }
-
-
+        
         private void ServiceClient() {
             Socket client = clientsocket;
             bool alive = true;
@@ -44,7 +42,6 @@ namespace chatRoomService {
             while (alive) {
                 Byte[] buffer = new Byte[2048000];
                 client.Receive(buffer);
-                //     string time = System.DateTime.Now.ToString();  
                 string clientcommand = System.Text.Encoding.Default.GetString(buffer);
 
                 string[] tokens = clientcommand.Split(new Char[] { '|' });
@@ -70,16 +67,6 @@ namespace chatRoomService {
                         SendToClient(cl, clientcommand);
                     }
                 }
-                if (tokens[0] == "PRIV") {
-                    string destclient = tokens[3];
-                    for (int n = 0; n < clients.Count; n++) {
-                        Client cl = (Client)clients[n];
-                        if (cl.Name.CompareTo(tokens[3]) == 0)
-                            SendToClient(cl, clientcommand);
-                        if (cl.Name.CompareTo(tokens[1]) == 0)
-                            SendToClient(cl, clientcommand);
-                    }
-                }
                 if (tokens[0] == "LEAVE") {
                     int remove = 0;
                     bool found = false;
@@ -100,6 +87,7 @@ namespace chatRoomService {
                 }
             }
         }
+
         private void SendToClient(Client cl, string message) {
             try {
                 byte[] buffer = System.Text.Encoding.Default.GetBytes(message.ToCharArray());
@@ -111,6 +99,7 @@ namespace chatRoomService {
                 ClientList.Items.Remove(cl.Name + " : " + cl.Host.ToString());
             }
         }
+
         private string GetChatterList() {
             string chatters = "";
             for (int n = 0; n < clients.Count; n++) {
@@ -134,12 +123,16 @@ namespace chatRoomService {
         }
 
         private void ChatRoomService_FormClosing(object sender, FormClosingEventArgs e) {
+            clientservice.Abort();
+            processor.Abort();
+            listener.Stop();
             System.Environment.Exit(0);
         }
 
         private void CloseButton_Click(object sender, EventArgs e) {
             clientservice.Abort();
             processor.Abort();
+            listener.Stop();
             System.Environment.Exit(0);
         }
     }

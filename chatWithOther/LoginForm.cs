@@ -17,10 +17,21 @@ namespace chatWithOther {
                 MessageBox.Show("用户名中包含不合法词或字符串");
                 return;
             }
+            if(UserName.Equals("") && PassWord.Equals("")) {
+                MessageBox.Show("请输入用户名和密码");
+                return;
+            }
+            if (UserName.Equals("")) {
+                MessageBox.Show("请输入用户名");
+                return;
+            }
+            if ( PassWord.Equals("")) {
+                MessageBox.Show("请输入密码");
+                return;
+            }
             //验证账号密码是否正确
-
             //新建窗体，登陆成功
-            if(UserName == PassWord) {
+            if (UserName == PassWord) {
                 Form ChatRoomForm = new ChatRoom(UserName);
                 ChatRoomForm.Show();
                 this.Hide();
