@@ -33,9 +33,9 @@
             this.currentTime = new System.Windows.Forms.Label();
             this.inputText = new System.Windows.Forms.TextBox();
             this.sendButton = new System.Windows.Forms.Button();
-            this.currentPerson = new System.Windows.Forms.ListView();
             this.changeTime = new System.Windows.Forms.Timer(this.components);
             this.chatTextChange = new System.Windows.Forms.Timer(this.components);
+            this.currentPersonList = new System.Windows.Forms.ListBox();
             this.SuspendLayout();
             // 
             // chatText
@@ -65,6 +65,7 @@
             // 
             // inputText
             // 
+            this.inputText.BackColor = System.Drawing.SystemColors.Control;
             this.inputText.Font = new System.Drawing.Font("宋体", 12F);
             this.inputText.Location = new System.Drawing.Point(12, 426);
             this.inputText.Multiline = true;
@@ -84,18 +85,6 @@
             this.sendButton.UseVisualStyleBackColor = true;
             this.sendButton.Click += new System.EventHandler(this.SendButton_Click);
             // 
-            // currentPerson
-            // 
-            this.currentPerson.BackColor = System.Drawing.SystemColors.Control;
-            this.currentPerson.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.currentPerson.Font = new System.Drawing.Font("宋体", 12F);
-            this.currentPerson.Location = new System.Drawing.Point(668, 30);
-            this.currentPerson.Name = "currentPerson";
-            this.currentPerson.Size = new System.Drawing.Size(118, 490);
-            this.currentPerson.TabIndex = 5;
-            this.currentPerson.UseCompatibleStateImageBehavior = false;
-            this.currentPerson.View = System.Windows.Forms.View.List;
-            // 
             // changeTime
             // 
             this.changeTime.Enabled = true;
@@ -107,12 +96,23 @@
             this.chatTextChange.Enabled = true;
             this.chatTextChange.Tick += new System.EventHandler(this.chatTextChange_Tick);
             // 
+            // currentPersonList
+            // 
+            this.currentPersonList.BackColor = System.Drawing.SystemColors.Control;
+            this.currentPersonList.Font = new System.Drawing.Font("宋体", 9F);
+            this.currentPersonList.FormattingEnabled = true;
+            this.currentPersonList.ItemHeight = 12;
+            this.currentPersonList.Location = new System.Drawing.Point(668, 24);
+            this.currentPersonList.Name = "currentPersonList";
+            this.currentPersonList.Size = new System.Drawing.Size(116, 484);
+            this.currentPersonList.TabIndex = 6;
+            // 
             // ChatRoom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(794, 561);
-            this.Controls.Add(this.currentPerson);
+            this.Controls.Add(this.currentPersonList);
             this.Controls.Add(this.sendButton);
             this.Controls.Add(this.inputText);
             this.Controls.Add(this.currentTime);
@@ -132,9 +132,9 @@
         private System.Windows.Forms.Label currentTime;
         private System.Windows.Forms.TextBox inputText;
         private System.Windows.Forms.Button sendButton;
-        private System.Windows.Forms.ListView currentPerson;
         private System.Windows.Forms.Timer changeTime;
         private System.Windows.Forms.Timer chatTextChange;
+        private System.Windows.Forms.ListBox currentPersonList;
     }
 }
 
