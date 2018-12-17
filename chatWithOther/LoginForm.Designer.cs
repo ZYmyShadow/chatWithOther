@@ -48,6 +48,7 @@
             this.PassWordText.Font = new System.Drawing.Font("宋体", 11F);
             this.PassWordText.Location = new System.Drawing.Point(104, 74);
             this.PassWordText.Name = "PassWordText";
+            this.PassWordText.PasswordChar = '*';
             this.PassWordText.Size = new System.Drawing.Size(118, 24);
             this.PassWordText.TabIndex = 1;
             // 
